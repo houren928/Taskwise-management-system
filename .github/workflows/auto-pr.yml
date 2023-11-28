@@ -9,6 +9,7 @@ on:
       - Redundancy-Of-Frontend-And-Backend-Code
       - Real-Time-Notifications
       - validation-error
+      - new_branch
 
 jobs:
   create_pull_request:
