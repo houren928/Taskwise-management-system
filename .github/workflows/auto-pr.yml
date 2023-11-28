@@ -19,6 +19,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Create Pull Request
-      run: gh pr create -B main -H ${{ github.head_ref || github.ref_name }}  --title "Merge ${{ github.head_ref || github.ref_name }} into main" --body 'Created by GitHub action'
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: repo-sync/pull-request@v4
+      with:
+        destination_branch: "main" 
+        github_token: ${{ secrets.GITHUB_TOKEN }}
